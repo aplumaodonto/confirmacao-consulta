@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Consulta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Confirmação de Consulta</h1>
+    <p>Por favor, escolha uma opção abaixo:</p>
+
+    <button class="confirm" onclick="sendResponse('confirmar')">Confirmar Consulta</button>
+    <button class="cancel" onclick="sendResponse('desmarcar')">Desmarcar Consulta</button>
+
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

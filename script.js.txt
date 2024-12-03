@@ -1,0 +1,24 @@
+function sendResponse(action) {
+    const consultaId = new URLSearchParams(window.location.search).get('id');
+    const url = "https://seu-servidor.com/api/resposta-consulta"; // Substitua pelo URL real do backend
+    const payload = {
+        consultaId: consultaId,
+        acao: action,
+    };
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = function () {
+        const response = JSON.parse(xhr.responseText);
+        const messageElement = document.getElementById("message");
+        if (xhr.status === 200) {
+            messageElement.textContent = response.message;
+        } else {
+            messageElement.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
+        }
+    };
+
+    xhr.send(JSON.stringify(payload));
+}
